@@ -1,0 +1,330 @@
+/* --- Global Variables (Task 1 Choices) --- */
+:root {
+  --primary-bg: #17253F;
+  /* Brisk Blue */
+  --secondary-bg: #2343BD;
+  /* Intensity Indigo */
+  --text-color: #C5C3C3;
+  /* Willow Gray */
+  --accent-color: #91B9D2;
+  /* Aqua Pulse */
+  --header-font: 'Arial', sans-serif;
+  --body-font: 'Comfortaa', cursive;
+}
+
+/* --- Base Styles --- */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--header-font);
+  color: var(--accent-color);
+}
+
+/* --- Header & Navigation --- */
+header {
+  background-color: var(--secondary-bg);
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Logo Styling - Controls the Aqua Pulse Dumbbell Icon */
+#main-logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- Interactive Elements (Task 3.1 Alerts) --- */
+button {
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+}
+
+/* --- Layout Elements (Tables & Forms) --- */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+td {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--accent-color);
+}
+
+/* Shared image styling for gallery/content */
+img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  box-sizing: border-box;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#hero-section {
+  /* Ensure the filename matches your actual image file exactly */
+  background: linear-gradient(rgba(23, 37, 63, 0.6), rgba(23, 37, 63, 0.6)),
+    url('images/yoga-hero.png') no-repeat center center;
+  background-size: cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Centers the form and keeps it from stretching */
+#contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  /* Centers the form on the page */
+  padding: 30px;
+  background-color: #17253F;
+  /* Brisk Blue [cite: 10] */
+  border: 2px solid #91B9D2;
+  /* Aqua Pulse [cite: 10] */
+  border-radius: 8px;
+  color: #C5C3C3;
+  /* Willow Gray [cite: 10] */
+}
+
+/* Makes inputs look modern and uniform */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  /* Fills the 600px container, not the whole screen */
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #C5C3C3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Ensures padding doesn't break width */
+}
+
+/* Style for the Submit button */
+#contact-form button[type="submit"] {
+  background-color: #2343BD;
+  /* Intensity Indigo [cite: 10] */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #91B9D2;
+  /* Aqua Pulse [cite: 10] */
+}
+
+
+/* 2. Navigation Spacing - adds a gap between your menu items */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  /* Adjust this number to increase/decrease spacing */
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #91B9D2;
+  /* Aqua Pulse hover color */
+}
+
+/* This class only handles the width of the content, not the background */
+.content-wrapper {
+  max-width: 1100px;
+  /* Adjust this to match your mock-up 'sweet spot' */
+  margin: 0 auto;
+  padding: 0 40px;
+  /* Keeps text away from the absolute edge on mobile */
+}
+
+/* Let the Hero span the full width again */
+#hero-section {
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(rgba(23, 37, 63, 0.6), rgba(23, 37, 63, 0.6)),
+    url('./images/yoga-hero.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Fix the Footer Subscribe Bar */
+footer form {
+  max-width: 400px;
+  /* Keeps the bar from stretching ridiculously */
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+}
+
+footer input[type="email"] {
+  flex-grow: 1;
+  /* Makes the input take the available space in that 400px box */
+  padding: 10px;
+}
+
+/* Container for each feature row */
+
+
+
+/* Feature Headings */
+.home-feature h3 {
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  color: #FFFFFF;
+}
+
+/* Feature Descriptions */
+.home-feature p {
+  font-family: 'Comfortaa', cursive;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Keeps the text centered and readable under the wide image */
+.home-feature h3,
+.home-feature p {
+  max-width: 800px;
+  /* Prevents text lines from getting too long/hard to read */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This is the key: Make sure the container itself can go wide */
+.content-wrapper {
+  max-width: 95% !important;
+  /* Forces it to ignore any other 1000px limits */
+  width: 95%;
+  margin: 0 auto;
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  /* Let the width dictate the size */
+  aspect-ratio: 16 / 7;
+  /* Forces a wide, cinematic shape */
+  object-fit: cover;
+  border: 2px solid #91B9D2;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Force the feature section to use the whole screen width */
+.home-feature {
+  width: 100% !important;
+  padding: 0;
+  /* Remove padding to let image hit the edges */
+  margin: 40px 0;
+  text-align: center;
+  background-color: #17253F;
+  /* Brisk Blue */
+}
+
+/* The wide cinematic banner look from your wireframe */
+.feature-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 400px;
+  /* Fixed height to prevent the 'long' look */
+  object-fit: cover;
+  /* Ensures the image fills the width without distorting */
+  display: block;
+  border-top: 2px solid #91B9D2;
+  /* Aqua Pulse Accents */
+  border-bottom: 2px solid #91B9D2;
+}
+
+/* Keep ONLY the text centered and restricted */
+.home-feature h3,
+.home-feature p {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+  color: #C5C3C3;
+  /* Willow Gray */
+}
