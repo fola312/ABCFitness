@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery | ABC Fitness Studio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="ABC Fitness Studio Logo">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="ABC Fitness Studio Logo" id="main-logo">
+            </a>
+        </div>
         <h1>ABC Fitness Studio</h1>
-        <button type="button">View Cart</button>
+        <button type="button" id="view-cart-btn">View Cart</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -21,25 +26,56 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-container">
         <h2>Our Products</h2>
         <table>
             <tr>
-                <td><img src="product1.jpg" alt="Item 1"><br><button>Add to Cart</button></td>
-                <td><img src="product2.jpg" alt="Item 2"><br><button>Add to Cart</button></td>
-                <td><img src="product3.jpg" alt="Item 3"><br><button>Add to Cart</button></td>
+                <td>
+                    <img src="images/mat.png" alt="Fitness Mat">
+                    <p>Yoga Mat</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/shirt.png" alt="Fitness Shirt">
+                    <p>Yoga Shirt</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/bottle.png" alt="Fitness Bottle">
+                    <p>Yoga Bottle</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
             </tr>
             <tr>
-                <td><img src="product4.jpg" alt="Item 4"><br><button>Add to Cart</button></td>
-                <td><img src="product5.jpg" alt="Item 5"><br><button>Add to Cart</button></td>
-                <td><img src="product6.jpg" alt="Item 6"><br><button>Add to Cart</button></td>
+                <td>
+                    <img src="images/bottle.png" alt="Fitness Bottle">
+                    <p>Yoga Bottle</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/mat.png" alt="Fitness Mat">
+                    <p>Yoga Mat</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/shirt.png" alt="Fitness Shirt">
+                    <p>Yoga Shirt</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
             </tr>
             <tr>
-                <td><img src="product7.jpg" alt="Item 7"><br><button>Add to Cart</button></td>
-                <td><img src="product8.jpg" alt="Item 8"><br><button>Add to Cart</button></td>
-                <td><img src="product9.jpg" alt="Item 9"><br><button>Add to Cart</button></td>
+                <td>
+                    <img src="images/shirt.png" alt="Fitness Shirt">
+                    <p>Yoga Shirt</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/bottle.png" alt="Fitness Bottle">
+                    <p>Yoga Bottle</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
+                <td>
+                    <img src="images/mat.png" alt="Fitness Mat">
+                    <p>Yoga Mat</p> <button class="add-to-cart-btn">Add to Cart</button>
+                </td>
             </tr>
         </table>
+        <div class="cart-controls">
+            <button type="button" class="clear-cart">Clear Cart</button>
+            <button type="button" class="process-order">Process Order</button>
+        </div>
     </main>
 
     <footer>
@@ -48,8 +84,9 @@
             <h4>Stay Connected</h4>
             <p>Join our newsletter for wellness tips and class updates.</p>
             <form>
-                <input type="email" placeholder="Email Address">
-                <button type="button">Subscribe</button>
+                <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribe-btn">Subscribe</button>
+            </form>
         </section>
 
         <section>
@@ -64,6 +101,17 @@
             <p>&copy; 2026 ABC Fitness Studio. All Rights Reserved.</p>
         </section>
     </footer>
+    <script src="script.js"></script>
+    <div id="cartModal"
+        style="display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7);">
+        <div
+            style="background-color: #17253F; margin: 15% auto; padding: 20px; border: 1px solid #91B9D2; width: 50%; color: #C5C3C3;">
+            <h3>Your Shopping Cart</h3>
+            <ul id="cartItemsList"></ul> <button id="clear-cart">Clear Cart</button>
+            <button id="process-order">Process Order</button>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
 </body>
 
 </html>
