@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>ABC Fitness Studio | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="ABC Fitness Studio Logo">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="ABC Fitness Studio Logo" id="main-logo">
+            </a>
+        </div>
         <h1>ABC Fitness Studio</h1>
         <nav>
             <ul>
@@ -21,24 +26,33 @@
     </header>
 
     <main>
-        <section id="hero">
-            <h2>Hero Image Placeholder</h2>
-            <button type="button">Join Now</button>
+        <section id="hero-section">
+            <h1>Achieve Balance and Harmony</h1>
+            <button id="join-btn">Join Now</button>
         </section>
 
-        <section id="services">
-            <article>
+        <section class="home-feature">
+            <div class="content-wrapper">
+                <img src="images/yoga.png" alt="Yoga Session" class="feature-image">
                 <h3>Yoga</h3>
                 <p>Short description of the feature or service offered.</p>
-            </article>
-            <article>
+            </div>
+        </section>
+
+        <section class="home-feature">
+            <div class="content-wrapper">
+                <img src="images/pilates.png" alt="Pilates Class" class="feature-image">
                 <h3>Pilates</h3>
                 <p>Short description of the feature or service offered.</p>
-            </article>
-            <article>
-                <h3>Zumba</h3>
+            </div>
+        </section>
+
+        <section class="home-feature">
+            <div class="content-wrapper">
+                <img src="images/kickboxing.png" alt="kickboxing" class="feature-image">
+                <h3>Kickboxing</h3>
                 <p>Short description of the feature or service offered.</p>
-            </article>
+            </div>
         </section>
     </main>
 
@@ -48,22 +62,23 @@
             <h4>Stay Connected</h4>
             <p>Join our newsletter for wellness tips and class updates.</p>
             <form>
-                <input type="email" placeholder="Email Address">
-                <button type="button">Subscribe</button>
-        </section>
+                <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribe-btn">Subscribe</button>
+            </form>
 
-        <section>
-            <p>Follow Us:
-                <a href="#">Facebook</a> |
-                <a href="#">Instagram</a> |
-                <a href="#">Twitter</a>
-            </p>
-        </section>
+            <section>
+                <p>Follow Us:
+                    <a href="#">Facebook</a> |
+                    <a href="#">Instagram</a> |
+                    <a href="#">Twitter</a>
+                </p>
+            </section>
 
-        <section>
-            <p>&copy; 2026 ABC Fitness Studio. All Rights Reserved.</p>
-        </section>
+            <section>
+                <p>&copy; 2026 ABC Fitness Studio. All Rights Reserved.</p>
+            </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
