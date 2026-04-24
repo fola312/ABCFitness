@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>About Us | ABC Fitness Studio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Logo">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="ABC Fitness Studio Logo" id="main-logo">
+            </a>
+        </div>
         <h1>ABC Fitness Studio</h1>
         <nav>
             <ul>
@@ -20,23 +25,34 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-container">
         <section id="about-content">
             <h2>Balance and Harmony</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
+                Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+                Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
+                theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
+                sit amet..", comes from a line in section 1.10.32.
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+                exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
         </section>
 
-        <section id="contact-form">
+        <section id="contact-info">
             <h2>Contact Us / Custom Orders</h2>
-            <form action="#">
-                <label for="fname">First Name:</label><br>
-                <input type="text" id="fname" name="fname"><br><br>
+            <form id="contact-form" action="#">
+                <label for="name">First Name:</label><br>
+                <input type="text" id="first-name" name="name" required><br><br>
 
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
+                <input type="email" id="email" name="email" required><br><br>
 
-                <label for="feedback">Message / Custom Order Details:</label><br>
-                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br><br>
+                <label for="message">Message / Custom Order Details:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
 
                 <button type="submit">Submit Request</button>
             </form>
@@ -49,8 +65,9 @@
             <h4>Stay Connected</h4>
             <p>Join our newsletter for wellness tips and class updates.</p>
             <form>
-                <input type="email" placeholder="Email Address">
-                <button type="button">Subscribe</button>
+                <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+                <button type="submit" id="subscribe-btn">Subscribe</button>
+            </form>
         </section>
 
         <section>
@@ -65,6 +82,7 @@
             <p>&copy; 2026 ABC Fitness Studio. All Rights Reserved.</p>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
